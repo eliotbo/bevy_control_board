@@ -1,0 +1,29 @@
+[package]
+name = "bevy_control_board"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+
+
+[[bin]]
+name  = "bevy_control_board"
+path = "src/main.rs"
+
+[dependencies]
+derive-macro = { path = "derive-macro" }
+# strum = "0.22.0"
+# strum_macros = "0.22"
+# serde_json = "1.0.59"
+# serde = { version = "1", features = ["derive"] }
+
+bevy = { version = "0.5", git = "https://github.com/bevyengine/bevy", rev="a3c53e689d62a2fd403bf0236b5638e569bd5600", default-features = true }
+crevice = { path = "crates/crevice", version = "0.8.0", features = ["glam"] }
+
+# num = "0.4.0"
+# rand = "0.8.4"
+# anyhow = "1.0"
+# thiserror = "1.0"
+
